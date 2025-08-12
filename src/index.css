@@ -12,6 +12,7 @@ a {
 
 .widget-container {
   width: 1000px;
+  height: 570px;
   margin: auto;
   padding: 20px;
 }
@@ -19,10 +20,11 @@ a {
 .title {
   color: #0071bc;
   font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .divider {
-  height: 2px;
+  height: 1px;
   background-color: #0071bc;
   margin: 10px 0 20px 0;
 }
@@ -42,7 +44,7 @@ a {
 .outlook-card {
   display: flex;
   align-items: center;
-  border: 1px solid #ccc;
+  border: 1px solid #000;
   border-radius: 16px;
   padding: 15px;
   position: relative;
@@ -72,7 +74,6 @@ a {
   position: absolute;
   right: 10px;
   top: -10px;
-  text-decoration: none;
   font-size: 1.2rem;
   color: black
 }
@@ -111,30 +112,28 @@ a {
 
 .avg-label {
   position: absolute;
-  top: -35px;
+  top: -37px;
   transform: translateX(-50%);
-  font-size: 0.8rem;
+  font-size: 16px;
 }
 
 .min-label {
   position: absolute;
-  top: -18px;
-  /* transform: translateX(-350%); */
-  font-size: 0.8rem;
+  top: -24px;
+  font-size: 16px;
 }
 
 .max-label {
   position: absolute;
-  top: -18px;
-  transform: translateX(50%);
-  font-size: 0.8rem;
+  top: -24px;
+  font-size: 16px;
 }
 
 
 .bar-values {
   display: flex;
   justify-content: space-between;
-  font-size: 0.8rem;
+  font-size: 16px;
   margin-top: 5px;
   position: relative;
 }
@@ -145,23 +144,31 @@ a {
 }
 
 .right-section {
+  position: relative;
   flex: 1;
   min-width: 300px;
 }
 
 .map-header {
+  position: absolute;
+  top: -24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .day-buttons button {
-  margin-left: 5px;
-  padding: 5px 10px;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  font-size: 16px;
+  /* margin-left: 5px; */
+  padding: 14px 35px;
   border: none;
   background-color: #ccc;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 6px;
+  z-index: 2;
 }
 
 .day-buttons button.active {
@@ -169,22 +176,40 @@ a {
   color: #fff;
 }
 
+.Today {
+  position: absolute;
+  left: 0px;
+}
+
+.Yesterday {
+  position: absolute;
+  left: 125px;
+}
+
 .map-container {
-  margin-top: 10px;
-  border-radius: 10px;
-  overflow: hidden;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  /* margin-top: 10px; */
+  
+  /* overflow: hidden; */
+  z-index: 1;
 }
 
 .map-image {
   width: 100%;
-  height: auto;
+  height: 100%;
+  overflow: clip;
+  border-radius: 10px;
 }
 
 .update-time {
-  font-size: 0.8rem;
-  text-align: right;
-  margin-top: 5px;
+  position: absolute;
+  bottom: -30px;
+  right: 0px;
+  font-size: 14px;
   color: #666;
+  
 }
 
 /* Responsive breakpoints */
