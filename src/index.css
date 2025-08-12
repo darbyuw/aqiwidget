@@ -1,13 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600&display=swap');
+
 body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #fff;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.widget-container {
+  width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.title {
+  color: #0071bc;
+  font-size: 1.5rem;
+}
+
+.divider {
+  height: 2px;
+  background-color: #0071bc;
+  margin: 10px 0 20px 0;
+}
+
+.widget-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.left-section {
+  flex: 1;
+  margin-right: 20px;
+  min-width: 300px;
+}
+
+.outlook-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  position: relative;
+}
+
+.outlook-icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.outlook-text h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.outlook-text p {
+  margin: 3px 0;
+  font-size: 0.9rem;
+}
+
+.external-link {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.data-section {
+  margin-top: 20px;
+}
+
+.data-section h4 {
+  margin-bottom: 5px;
+}
+
+.aqi-bar-container {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.bar {
+  position: relative;
+  height: 15px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.bar-color {
+  display: flex;
+  height: 100%;
+}
+
+.avg-marker {
+  position: absolute;
+  top: -18px;
+  font-size: 0.8rem;
+  transform: translateX(-50%);
+}
+
+.avg-label {
+  position: absolute;
+  top: -35px;
+  transform: translateX(-50%);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.bar-values {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  position: relative;
+}
+
+.bar-avg-value {
+  position: absolute;
+  transform: translateX(-50%);
+}
+
+.right-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.map-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.day-buttons button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #ccc;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.day-buttons button.active {
+  background-color: #666;
+  color: #fff;
+}
+
+.map-container {
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+}
+
+.update-time {
+  font-size: 0.8rem;
+  text-align: right;
+  margin-top: 5px;
+  color: #666;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1050px) {
+  .widget-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 768px) {
+  .widget-content {
+    flex-direction: column;
+  }
+  .left-section, .right-section {
+    margin-right: 0;
+    width: 100%;
+  }
 }
