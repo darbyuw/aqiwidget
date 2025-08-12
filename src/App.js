@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './index.css';
+import Image from './images/Logo.png';
 
 const AQI_BREAKPOINTS = [
   {value:0, color:'#01E400'},    // Green
@@ -17,7 +18,7 @@ const App = () => {
     title:'Smoke Outlook',
     location:'North Central Arizona - Dragon Bravo',
     issued:'07/14/2025 08:37 (PDT)',
-    image:'blank.png'
+    image: Image
   });
   const [selectedDay, setSelectedDay] = useState('Today');
 
@@ -42,8 +43,10 @@ const App = () => {
 
     return (
       <div className="aqi-bar-container">
+        <div className="min-label" style={{left:`0`}}>Min.</div>
         <div className="avg-marker" style={{left:`${avgLeft}%`}}>▼</div>
         <div className="avg-label" style={{left:`${avgLeft}%`}}>Average</div>
+  
         <div className="bar">
           <div className="bar-color">{segments}</div>
         </div>
@@ -69,6 +72,8 @@ const App = () => {
       <div className="divider"></div>
       <div className="widget-content">
         <div className="left-section">
+
+          <a href="https://outlooks.airfire.org/outlook/18d97a5d?">
           <div className="outlook-card">
             <img src={forecastInfo.image} alt="Forecast" className="outlook-icon" />
             <div className="outlook-text">
@@ -76,14 +81,15 @@ const App = () => {
               <p>{forecastInfo.location}</p>
               <p><strong>Forecast Issued:</strong> {forecastInfo.issued}</p>
             </div>
-            <a href="#" className="external-link">↗</a>
+            <p className="external-link">↗</p>
           </div>
+          </a>
 
           <div className="data-section">
-            <h4 style={{marginTop:'50px'}}>Yesterday</h4>
+            <h4 style={{marginBottom:'50px'}}>Yesterday</h4>
             {renderAQIBar(yesterdayData.min, yesterdayData.avg, yesterdayData.max)}
 
-            <h4 style={{marginTop:'50px'}}>Past 7 Days</h4>
+            <h4 style={{marginBottom:'50px'}}>Past 7 Days</h4>
             {renderAQIBar(past7DaysData.min, past7DaysData.avg, past7DaysData.max)}
           </div>
         </div>
@@ -97,7 +103,7 @@ const App = () => {
             </div>
           </div>
           <div className="map-container">
-            <img src="blank.png" alt="Map" className="map-image" />
+            <img src='./images/aqi-map-ex.png' alt="Map" className="map-image" />
           </div>
           <p className="update-time">Updated 2 min ago</p>
         </div>

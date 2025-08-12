@@ -6,6 +6,9 @@ body {
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+}
 
 .widget-container {
   width: 1000px;
@@ -40,7 +43,7 @@ body {
   display: flex;
   align-items: center;
   border: 1px solid #ccc;
-  border-radius: 10px;
+  border-radius: 16px;
   padding: 15px;
   position: relative;
 }
@@ -54,19 +57,24 @@ body {
 .outlook-text h3 {
   margin: 0;
   font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
 }
 
 .outlook-text p {
   margin: 3px 0;
   font-size: 0.9rem;
+  text-decoration: none;
+  color: black;
 }
 
 .external-link {
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: -10px;
   text-decoration: none;
   font-size: 1.2rem;
+  color: black
 }
 
 .data-section {
@@ -106,8 +114,22 @@ body {
   top: -35px;
   transform: translateX(-50%);
   font-size: 0.8rem;
-  font-weight: 600;
 }
+
+.min-label {
+  position: absolute;
+  top: -18px;
+  /* transform: translateX(-350%); */
+  font-size: 0.8rem;
+}
+
+.max-label {
+  position: absolute;
+  top: -18px;
+  transform: translateX(50%);
+  font-size: 0.8rem;
+}
+
 
 .bar-values {
   display: flex;
