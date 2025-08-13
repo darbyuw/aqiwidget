@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import './index.css';
 import Image from './images/Logo.png';
-import map from './images/aqi-map-ex.png';
+import mapToday from './images/map-today.png';
+import mapYesterday from './images/map-yesterday.png'
 
 const AQI_BREAKPOINTS = [
   {value:0, color:'#01E400'},    // Green
@@ -17,8 +18,8 @@ const App = () => {
   const [past7DaysData] = useState({min:21, avg:145, max:295});
   const [forecastInfo] = useState({
     title:'Smoke Outlook',
-    location:'North Central Arizona - Dragon Bravo',
-    issued:'07/14/2025 08:37 (PDT)',
+    location:'NW New Mexico/SW Colorado',
+    issued:'8/13/2025 06:55 (PDT)',
     image: Image
   });
   const [selectedDay, setSelectedDay] = useState('Today');
@@ -80,7 +81,7 @@ const App = () => {
             <div className="outlook-text">
               <h3 style={{fontSize: '20px'}}>{forecastInfo.title}</h3>
               <p style={{fontSize: '14px'}}>{forecastInfo.location}</p>
-              <p style={{fontSize: '14px'}}><strong>Forecast Issued:</strong> {forecastInfo.issued}</p>
+              <p style={{fontSize: '14px'}}>Forecast Issued: <strong>{forecastInfo.issued}</strong> </p>
             </div>
             <p className="external-link"> <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                 <mask id="path-1-inside-1_1259_691" fill="white">
@@ -109,7 +110,11 @@ const App = () => {
             <h4 style={{fontWeight: '400'}}>Max Observed NowCast PM2.5</h4> 
           </div>
           <div className="map-container">
-             <img src={map} alt="Map" className="map-image" /> {/* TODO: Intsert embedded map here! */}
+             <img 
+              src={selectedDay === 'Today' ? mapToday : mapYesterday} 
+              alt="Map" 
+              className="map-image" 
+            /> {/* TODO: Intsert embedded map here! */}
             <div className="update-time">
             <p>Updated 2 min ago</p>
             </div>

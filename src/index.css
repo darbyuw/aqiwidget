@@ -191,8 +191,6 @@ a {
   position: absolute;
   top: 20px;
   left: 0px;
-  /* margin-top: 10px; */
-  /* overflow: hidden; */
   z-index: 1;
 }
 
