@@ -50,6 +50,10 @@ a {
   position: relative;
 }
 
+.outlook-card:hover {
+  cursor: pointer;
+}
+
 .outlook-icon {
   width: 50px;
   height: 50px;
@@ -167,9 +171,12 @@ a {
   padding: 14px 35px;
   border: none;
   background-color: #ccc;
-  cursor: pointer;
   border-radius: 6px;
   z-index: 2;
+}
+
+.day-buttons button:hover {
+      cursor: pointer;
 }
 
 .day-buttons button.active {
