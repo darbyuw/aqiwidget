@@ -13,7 +13,7 @@ const AQI_BREAKPOINTS = [
 ];
 
 const App = () => {
-  const [yesterdayData] = useState({min:51, avg:175, max:200});
+  const [yesterdayData] = useState({min:54, avg:175, max:200});
   const [past7DaysData] = useState({min:21, avg:145, max:295});
   const [forecastInfo] = useState({
     title:'Smoke Outlook',
@@ -109,7 +109,7 @@ const App = () => {
             <h4 style={{fontWeight: '400'}}>Max Observed NowCast PM2.5</h4> 
           </div>
           <div className="map-container">
-            <img src={map} alt="Map" className="map-image" /> {/* TODO: Intsert embedded map here! */}
+             <img src={map} alt="Map" className="map-image" /> {/* TODO: Intsert embedded map here! */}
             <div className="update-time">
             <p>Updated 2 min ago</p>
             </div>
