@@ -75,7 +75,7 @@ const App = () => {
       <div className="widget-content">
         <div className="left-section">
 
-          <a href="https://outlooks.airfire.org/outlook/18d97a5d?">
+          <a href="https://outlooks.airfire.org/outlook/8ab609e5?">
           <div className="outlook-card">
             <img src={forecastInfo.image} alt="Forecast" className="outlook-icon" />
             <div className="outlook-text">
