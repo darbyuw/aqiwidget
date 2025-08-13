@@ -1,17 +1,18 @@
 {
   "files": {
     "main.css": "/aqiwidget/static/css/main.ef3fc1b0.css",
-    "main.js": "/aqiwidget/static/js/main.abf32f5b.js",
+    "main.js": "/aqiwidget/static/js/main.74dbd678.js",
     "static/js/453.8e004ace.chunk.js": "/aqiwidget/static/js/453.8e004ace.chunk.js",
-    "static/media/aqi-map-ex.png": "/aqiwidget/static/media/aqi-map-ex.948617dd0b9db4bd0763.png",
+    "static/media/map-yesterday.png": "/aqiwidget/static/media/map-yesterday.95cb3ddd4028b644e24c.png",
+    "static/media/map-today.png": "/aqiwidget/static/media/map-today.8b584ca9281cb5657a5e.png",
     "static/media/Logo.png": "/aqiwidget/static/media/Logo.58c3e024d4ad15dc7a29.png",
     "index.html": "/aqiwidget/index.html",
     "main.ef3fc1b0.css.map": "/aqiwidget/static/css/main.ef3fc1b0.css.map",
-    "main.abf32f5b.js.map": "/aqiwidget/static/js/main.abf32f5b.js.map",
+    "main.74dbd678.js.map": "/aqiwidget/static/js/main.74dbd678.js.map",
     "453.8e004ace.chunk.js.map": "/aqiwidget/static/js/453.8e004ace.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ef3fc1b0.css",
-    "static/js/main.abf32f5b.js"
+    "static/js/main.74dbd678.js"
   ]
 }
